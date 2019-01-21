@@ -4,6 +4,7 @@ import com.stackroute.muzixapp.domain.Track;
 import com.stackroute.muzixapp.exception.TrackNotFoundException;
 import com.stackroute.muzixapp.exception.UserAlreadltExistsException;
 import com.stackroute.muzixapp.service.TrackServices;
+import io.swagger.annotations.Api;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "api/v1")
+@Api(value = "HelloWorld Resource", description = "shows hello world")
 public class TrackController {
     TrackServices trackService;
     ResponseEntity responseEntity;
